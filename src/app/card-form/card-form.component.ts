@@ -14,7 +14,7 @@ export class CardFormComponent implements OnInit {
        Validators.required,
        Validators.minLength(3),
        Validators.maxLength(5),
-       Validators.pattern(/\s/),
+       Validators.pattern("[a-zA-Z ]*"),
     ] )
   });
 
