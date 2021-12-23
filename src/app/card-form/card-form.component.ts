@@ -15,11 +15,17 @@ export class CardFormComponent implements OnInit {
        Validators.minLength(3),
        Validators.maxLength(5),
        Validators.pattern("[a-zA-Z ]*"),
-    ] )
+      
+    ] ),
+
+      cardNumber: new FormControl(''),
+      expiration: new FormControl(''),
+      securityCode: new FormControl('')
+
   });
 
   constructor() {
-      console.log(this.cardForm);
+      console.log(this.cardForm.get('name'));
   }
 
   ngOnInit() {}
